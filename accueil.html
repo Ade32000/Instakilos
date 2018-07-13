@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="accueil.css">
+	<title>Instakilos - Interface Visiteur</title>
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-light bg-light">
+			<img class="img-fluid" alt="Responsive image" id='logo' src="logo.png">
+			<span id="titre"><h1>Instakilos</h1></span>
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+				Commencer
+			</button>
+		</nav>
+	</header>
+	<div id="datas_ut">
+		
+		<img class="img-fluid" alt="Responsive image" id='avatar' src="avatar.png">
+		<div id="ref">
+			<span id="pseudo_ut">Pseudo ici !</span><button type="button" class="btn btn-light" data-toggle="modal" data-target="#myModal" id="buttonModif">Modifier le profil</button>
+			<p><div class="stats">0</div><div class="stats cpt"> publications </div><div class="stats">0</div><div class="stats cpt"> visites </div><div class="stats">0</div><div class="stats cpt"> like </div></p>
+		</div>
+		<!-- Button trigger modal -->
+	</div>
+
+	<div id='start_app'>
+		<span><img class="img-fluid" alt="Responsive image" id='img_accueil' src="polaroid.jpg"></span>
+		<span id='start'><p><b>Vous n'avez pas encore de contenu</p><p>Commencez à partager vos meilleurs moments :</p></b></span><button id='add' type="button" class="btn btn-dark" data-toggle="modal" data-target="#myModal-90">Ajouter</button>
+	</div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalCenterTitle">Instakilos</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<p><input id='pseudo' type="text" name="pseudo" placeholder="Nom d'utilisateur"></p>
+				<p><input id='mdp' type="text" name="mdp" placeholder="Mot de passe"></p>
+				<button type="button" class="btn btn-primary">Se connecter</button>
+			</div>
+			<div class="modal-footer">
+				<p><span>Pas encore de profil ?</span><span><a href="#myModal" data-toggle="modal" data-target="#myModal" data-dismiss="modal">S'enregistrer</a></span></p>
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Bouton pour modifier le profil -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+	<div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+
+
+				<!-- petite croix pour fermer la modal -->
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+
+				<!-- Titre dans la modal  -->
+				<h4 class="modal-title">Créer votre profil</h4>
+			</div>
+			<div class="modal-body">
+
+				<!-- Le formulaire à remplir -->
+
+				<form id="modif">
+
+					<p>
+						<input type="text" id="nom_ut" placeholder="Nom d'utilisateur"></p>
+						<p>
+							<input type="text" placeholder="Mot de passe"></p>
+							<p>
+								<input type="text" placeholder="Confirmez votre mot de passe"></p>
+								<p>
+
+									<!-- Bouton "Parcourir" et chercher une photo sur le pc -->
+									Choisir une photo de profil
+									<button id="photo">Parcourir...</button></p>
+
+
+									<!-- Image à modifier pour le profil -->
+
+									<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_kpzqhkjWQikfbUYULnSomWn2Nhr5EibgOBvZcMLhonLDFkbL" id="modifphoto">
+
+									<!-- Bouton pour valider les changements -->
+
+									<button id="send" class="btn btn btn-success">Valider</button>
+
+									<!-- Bouton pour Abandonner les changements -->
+
+									<button id="cancel" class="btn btn-danger" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter">Abandonner</button>
+								</form>
+							</div>
+
+
+						</div>
+
+
+
+						<script src="node_modules/jquery/dist/jquery.min.js"></script>
+						<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+						<script type="text/javascript" src="accueil.js"></script>
+					</body>
+					</html>

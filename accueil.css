@@ -1,0 +1,153 @@
+body
+{
+	margin: 0px;
+	padding: 0px;
+	/*display: none;*/
+}
+header
+{
+	max-width: 100%;
+	height: auto;
+}
+h1
+{
+	font-family: 'Satisfy', cursive;
+	display: inline-block;
+	width: 200px;
+	font-size: 30px;
+	
+}
+#titre
+{
+	display: inline-block;
+	/*text-align: center;*/
+	margin-top: 35px;
+	float: left;
+}
+#head
+{
+	margin: 0px;
+	padding: 0px;
+	height: 140px;
+	border-bottom: 3px solid black;
+	text-align: center;
+}
+#avatar
+{
+	display: inline-block;
+	width : 150px;
+	float: left;
+	margin-left: 300px;
+	margin-top: 15px;
+	border-radius: 50%;
+	max-width: 100%;
+	height: auto;
+}
+#logo
+{
+	display: inline-block;
+	width : 60px;
+	
+	border-right: 1px solid black;
+	padding-right: 15px;
+	float: left;
+	margin-left:0px;
+	margin-top: 15px;
+	max-width: 100%;
+	height: auto;
+}
+#add
+{
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	font-family: 'Satisfy', cursive;
+	font-size: 24px;
+	text-align: center;
+	margin-left: 30px;
+}
+#galerie
+{
+	border: 1px solid grey;
+	width: 1000px;
+	height: 400px;
+	margin: auto;
+}
+.img
+{
+	border: 1px solid grey;
+}
+#comment
+{
+	border: 1px solid grey;
+	width: 500px;
+	height: 90px;
+}
+=======
+#photo /* texte en rouge sur la modal mais à modifier */
+{
+	color: red;
+}
+
+#modifphoto /* photo dans la modal */
+
+{
+	position:absolute;
+	/*height: 20px
+	width :20px;*/
+	top:20px;
+	right:20px;
+	border-radius: 50%
+}
+
+#buttonModif
+{
+	display: block;
+	float: right;
+	
+}
+
+/*.modal-content{
+	width: 1000px;
+}
+.modal-body{
+	padding: 0 !important;
+}*/
+#ref
+{
+	float: right;
+	margin-right: 500px;
+	display: inline-block;
+	width: 350px;
+}
+.stats
+{
+	display: inline-block;
+	margin-top: 20px;
+	margin-right: 10px;
+	font-size: 24px;
+}
+#img_accueil
+{
+	width: 400px;
+	margin-left: 260px;
+	display: inline-block;
+}
+#datas_ut
+{
+	min-height: 230px;
+	margin-top: 30px;
+	border-bottom: 1px solid grey;
+	
+}
+#start
+{
+	display: inline-block;
+	margin-left: 40px;
+}
+#start_app
+{
+	margin-top: 20px;
+	
+}
