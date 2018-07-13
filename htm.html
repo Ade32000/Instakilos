@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="htm.css">
+  <!-- Add jQuery library -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+	<title></title>
+</head>
+<body>
+<h2> GALLERIES </h2>
+<p>In this example, we use CSS to create a modal (dialog box) that is hidden by default.</p>
+<p>We use JavaScript to trigger the modal and to display the current image inside the modal when it is clicked on. Also note that we use the value from the image's "alt" attribute as an image caption text inside the modal.</p>
+
+	<ul>
+     <li>
+          <a href="#">
+          <img id="myImg" src="noir.png" alt="" style="width:100%;max-width:300px"/>
+          <strong>PHOTO 1</strong>
+          </a>
+     </li>
+<!--       <li>
+          <a href="#">
+          <img id="myImg" src="belle.gif" alt="" style="width:100%;max-width:300px"/>
+          <strong>PHOTO 2</strong>
+          </a>
+     </li>
+ </ul>
+ -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+
+    <form action="login.php?l=fr" target="_blank" method="POST" id="formm" class="form-horizontal" style="margin:0"> 
+        <div class="modal-body">
+            <div class="control-group">
+                <label class="control-label" for="input-password">Commentaires</label>
+                <div class="controls">
+                    <input type="text" id="input-password" name="commentaires" placeholder="Commentaires">
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <input type="submit" class="btn btn-info" value="Envoyer" onclick="$('#infos').modal('hide')
+            ;" /> </br>
+              <div class="modal-footer">
+          <a href="#"><input type="button" value="fermer"/></a>
+        </div>
+
+        </div>
+  <a href="javascript:’twFermer();’">Fermer la fenêtre</a>
+<form>
+<input type="button" value="Cliquez ici" onClick="alert('Vous avez bien cliqué ici')">
+</form> 
+
+  <input class='boutton' type='button'name='quitter' value='Quitter' OnClick="close();"/></br>
+</form>
+
+
+<!-- 
+	<ul>
+     <li>
+          <a href="#">
+          <img src="belle.gif" alt="" />
+          <strong>PHOTO 1</strong>
+          </a>
+     </li>
+     <li>
+          <a href="#">
+          <img src="foret.jpeg" alt="" />
+          <strong>PHOTO 2 </strong>
+          </a>
+     </li>
+     
+      <li>
+          <a href="#">
+          <img src="nature.jpg" alt="" />
+          <strong>PHOTO 3 </strong>
+          </a>
+     </li>
+ <li>
+          <a href="#">
+          <img src="noir.png" alt="" />
+          <strong>PHOTO 4 </strong>
+
+
+      <li>
+          <a href="#">
+          <img src="elephant.jpg" alt="" />
+          <strong>PHOTO 5 </strong>
+          </a>
+     </li>
+      <li>
+          <a href="#">
+          <img src="im.jpg" alt="" />
+          <strong>PHOTO 6 </strong>
+          </a>
+     </li>
+         <li>
+          <a href="#">
+          <img src="ok.jpg" alt="" />
+          <strong>PHOTO 7 </strong>
+          </a>
+     </li>
+
+  </li>
+         <li>
+          <a href="#">
+          <img src="superthumb.jpg" alt="" />
+          <strong>PHOTO 8 </strong>
+          </a>
+     </li>
+   <li>
+      <a href="s.png">
+        <img src="s.png" width=15% height=15%>
+          </a>
+
+          <strong>PHOTO 9 </strong>
+          </a>
+     </li>
+    
+</ul> -->
+
+<script type="text/javascript" src="htm.js"></script>
+</body>
+</html>
