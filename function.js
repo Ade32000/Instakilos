@@ -1,42 +1,47 @@
 var tabInput = [];
-var inputStringified;
-for (var i = 0; i < localStorage.length; i++)
-{
-	tabInput.push(JSON.parse(localStorage.getItem("key")));
-}
-//ajouter une image
-function ajoutImg()
-{
 
-}
-
-
-
-//supprimer une image
-function supprImg()
-{
-
-}
-
-
-
+tabInput = JSON.parse(localStorage.getItem("key"));
+ 
 //ajouter un commentaire
 function ajoutCom()
 {
+	
+	$("#tableCom").empty();	  
 	var input = $("#inputCom").val();
-	$("#divCom").append("<div>"+input+"<button class='suppr'>"+"delete"+"</button></div>");
-	inputStringified = JSON.stringify(input);
-	localStorage.setItem("key",id);
-	tabInput.push(inputStringified);
-	console.log(inputStringified);
-	$("#inputCom").val('');
-}
+	if (tabInput == null)
+	{
+		tabInput = [];
 
+	}
+	tabInput.push({id : uniqId(),commentaire : input});
+	window.localStorage.setItem("key",JSON.stringify(tabInput));
+	$("#inputCom").val('');
+	tabInput = JSON.parse(localStorage.getItem("key"));
+	for (var i = 0; i < tabInput.length; i++)
+	{
+		$("#tableCom").append("<tr><td>"+tabInput[i].commentaire+"<button class='suppr'>"+"delete"+"</button></td></tr>");
+	}
+};
+	
 
 
 function supprCom()
 {
 	$(this).parent().remove();
+	console.log('ok');
+	var ligne = $(this).closest("tr");
+	var idTmp = ligne.find(".id").text();
+	var nomTmp= ligne.find(".nom").text();
+	var prenomTmp= ligne.find(".prenom").text();
+	if (confirm("Voulez-vous vraiment supprimer ?"))
+	{
+		var contact = JSON.parse(window.localStorage.getItem("annuaire"));
+		contact.splice(idTmp, 1);
+		var val = JSON.stringify(contact);
+		window.localStorage.setItem("annuaire", val);
+		location.href="index.html";
+	}
+
 }
 
 //compteur de like
@@ -51,7 +56,7 @@ function like()
 	{
 		cmt--;
 		console.log("cmt = "+cmt);
-		doubleClick = 0;
+		doublceClick = 0;
 		console.log("doubleClick = "+doubleClick);
 	}
 	else
@@ -66,11 +71,6 @@ function like()
 	console.log("fin function");
 }
 
-//afficher le manuel d'utilisation
-function aide()
-{
-	//window.open ?
-};
 
 
 function modifPhoto()
@@ -84,7 +84,7 @@ function modifPhoto()
 
 
 
-	
+	//tabInput = JSON.parse(localStorage.getItem("key"))
 
 $("#localStorage").click(function()
 {
@@ -120,15 +120,23 @@ function uniqId()
 }
 
 
-var id = uniqId();
-console.log(id);
+// localStorage.clear();
 
 
 
+//ajouter une image
+function ajoutImg()
+{
+
+}
 
 
 
+//supprimer une image
+function supprImg()
+{
 
+}
 
 
 
